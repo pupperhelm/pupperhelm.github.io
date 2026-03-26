@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Family Meal Planner Closed Beta Interest</title>
+    <meta name="robots" content="noindex,follow">
+    <meta
+      name="description"
+      content="Join the Family Meal Planner closed beta interest list."
+    >
+    <link rel="canonical" href="https://pupperhelm.github.io/family-meal-planner/subscribe.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/family-meal-planner/">Family Meal Planner</a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="/family-meal-planner/">App page</a>
+          <a href="/family-meal-planner/privacy_notice.html">Privacy</a>
+          <a href="/family-meal-planner/support.html">Support</a>
+        </nav>
+      </header>
+
+      <main class="legal-page">
+        <article class="subscribe-card">
+          <p class="eyebrow">Closed Beta</p>
+          <h1>Register your interest</h1>
+          <p>
+            This first version uses a direct email flow from GitHub Pages. Submitting the form opens your
+            email app with the details prefilled so you can send the request to us.
+          </p>
+
+          <form id="beta-form" class="form-grid">
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" class="input" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="platform">Platform</label>
+              <select id="platform" class="select" name="platform">
+                <option value="iPhone">iPhone</option>
+                <option value="Android">Android</option>
+                <option value="Both">Both</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="household">Household size</label>
+              <select id="household" class="select" name="household">
+                <option value="1-2">1-2 people</option>
+                <option value="3-4">3-4 people</option>
+                <option value="5+">5+ people</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">What would make this useful for your family?</label>
+              <textarea id="notes" class="textarea" name="notes"></textarea>
+            </div>
+
+            <button class="button" type="submit">Open email draft</button>
+          </form>
+
+          <p class="helper">
+            If the form does not open your email app, send a note directly to
+            <a href="mailto:pupperhelm@gmail.com?subject=Family%20Meal%20Planner%20Beta%20Interest">pupperhelm@gmail.com</a>.
+            Contact and beta-interest handling is described in the
+            <a href="/family-meal-planner/privacy_notice.html">privacy notice</a>.
+          </p>
+        </article>
+      </main>
+
+      <script>
+        const betaForm = document.getElementById("beta-form");
+
+        betaForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value.trim();
+          const platform = document.getElementById("platform").value;
+          const household = document.getElementById("household").value;
+          const notes = document.getElementById("notes").value.trim();
+
+          const subject = "Family Meal Planner Beta Interest";
+          const body = [
+            "Email: " + email,
+            "Platform: " + platform,
+            "Household size: " + household,
+            "",
+            "Why this would help:",
+            notes || "(no extra notes)"
+          ].join("\n");
+
+          window.location.href =
+            "mailto:pupperhelm@gmail.com?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+        });
+      </script>
+    </div>
+  </body>
+</html>

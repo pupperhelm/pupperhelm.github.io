@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pupperhelm.github.io/</loc>
@@ -11,5 +11,8 @@
   </url>
   <url>
     <loc>https://pupperhelm.github.io/family-meal-planner/</loc>
+  </url>
+  <url>
+    <loc>https://pupperhelm.github.io/wealth-checker/</loc>
   </url>
 </urlset>

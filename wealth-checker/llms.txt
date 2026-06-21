@@ -1,0 +1,16 @@
+# Wealth Checker Canada
+
+> Compare income and net worth with Canadians your age, province and household.
+
+- App page: https://pupperhelm.github.io/wealth-checker/
+- Privacy policy: https://pupperhelm.github.io/wealth-checker/privacy_notice.html
+- Web tool: https://rrsprefundcalculator.com/wealth-checker
+
+## Source material
+- [Statistics Canada: Canadian Income Survey, table 11-10-0190-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110019001) - Income comparisons by economic family type and regional income context.
+- [Statistics Canada: Survey of Financial Security, table 11-10-0016-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110001601) - Net-worth age anchors, assets, debts, household type and geography context.
+- [Statistics Canada: Net-worth age context, table 11-10-0065-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006501) - Age-smoothing reference for estimates between published age groups.
+- [CRA T1 income statistics](https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/income-statistics-gst-hst-statistics.html) - Income percentile distribution ratios that shape the comparison curve.
+
+## Use and limits
+The app provides approximate educational comparisons from grouped public Canadian data. It is not financial, tax, legal, or investment advice.

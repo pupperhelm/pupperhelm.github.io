@@ -1,4 +1,4 @@
-# Mahjong Helper: Hong Kong
+# Mahjong Helper Hong Kong Rules
 
 Offline Android companion for physical Hong Kong Mahjong. Learn tiles and rules, check hands, and understand faan. Preparing for Google Play: US$2.99 / CA$3.99, one-time purchase. No ads.
 

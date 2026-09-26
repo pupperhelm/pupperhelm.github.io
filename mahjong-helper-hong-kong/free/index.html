@@ -28,6 +28,7 @@
       .giveaway-action .button { min-height: 54px; min-width: 240px; font-size: 1.05rem; }
       .giveaway-action .button:disabled { opacity: .65; cursor: wait; transform: none; }
       .giveaway-note { margin: 16px auto 0; color: var(--muted); }
+      .giveaway-code { display: block; margin: 18px auto 0; overflow-wrap: anywhere; font: 700 clamp(1.2rem, 4vw, 1.6rem)/1.3 "Outfit", sans-serif; color: var(--primary-deep); }
       .giveaway-error { color: #8b2e1b; margin: 16px auto 0; max-width: 38ch; }
       .giveaway-secondary { margin-top: 28px; color: var(--muted); }
       .giveaway-secondary a { color: var(--primary-deep); }
@@ -51,7 +52,13 @@
           <p id="remaining" class="giveaway-count" role="status" aria-live="polite">Checking availability…</p>
           <div id="claim-section" class="giveaway-action" hidden>
             <button id="claim-button" class="button" type="button">Claim a free copy</button>
-            <p class="giveaway-note">You'll be sent to Google Play to redeem your free copy. No signup or payment required.</p>
+            <p class="giveaway-note">You'll get a code and a link to redeem it on Google Play. No signup or payment required.</p>
+          </div>
+          <div id="redeem-section" class="giveaway-action" hidden>
+            <p>Your Google Play promo code:</p>
+            <code id="promo-code" class="giveaway-code"></code>
+            <p class="giveaway-note">Save this code until you finish redeeming it.</p>
+            <a id="redeem-link" class="button" href="https://play.google.com/redeem" rel="noreferrer">Redeem on Google Play</a>
           </div>
           <div id="sold-out-section" class="giveaway-action" hidden>
             <p>Thanks for checking it out. Mahjong Helper Hong Kong Rules is still available on Google Play.</p>

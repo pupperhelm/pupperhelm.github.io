@@ -2,6 +2,9 @@
   const api = window.GIVEAWAY_API_URL?.replace(/\/$/, "");
   const remaining = document.getElementById("remaining");
   const claimSection = document.getElementById("claim-section");
+  const redeemSection = document.getElementById("redeem-section");
+  const promoCode = document.getElementById("promo-code");
+  const redeemLink = document.getElementById("redeem-link");
   const soldOutSection = document.getElementById("sold-out-section");
   const button = document.getElementById("claim-button");
   const error = document.getElementById("error");
@@ -53,8 +56,16 @@
       const data = await response.json();
       if (response.status === 409 && data.error === "sold_out") return soldOut();
       if (!response.ok) throw new Error(data.error || "Claim failed. Please try again.");
-      if (!/^https:\/\/play\.google\.com\/redeem\?code=/.test(data.redemptionUrl)) throw new Error("Unexpected redemption link. Please try again.");
-      window.location.assign(data.redemptionUrl);
+      const redemptionUrl = new URL(data.redemptionUrl);
+      const code = redemptionUrl.searchParams.get("code");
+      if (redemptionUrl.origin !== "https://play.google.com" || redemptionUrl.pathname !== "/redeem" || !code) {
+        throw new Error("Unexpected redemption link. Please try again.");
+      }
+      promoCode.textContent = code;
+      redeemLink.href = redemptionUrl.href;
+      remaining.textContent = "Your free copy is ready.";
+      claimSection.hidden = true;
+      redeemSection.hidden = false;
     } catch (failure) {
       showError(failure instanceof Error ? failure.message : "Claim failed. Please try again.");
     } finally {

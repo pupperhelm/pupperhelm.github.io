@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>50 Free Copies — Mahjong Helper Hong Kong Rules</title>
+    <meta name="description" content="I'm giving away 50 copies of Mahjong Helper Hong Kong Rules on Google Play. Claim one while they're available.">
+    <link rel="canonical" href="https://pupperhelm.github.io/mahjong-helper-hong-kong/free/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="50 Free Copies — Mahjong Helper Hong Kong Rules">
+    <meta property="og:description" content="I'm giving away 50 copies of Mahjong Helper Hong Kong Rules on Google Play. Claim one while they're available.">
+    <meta property="og:url" content="https://pupperhelm.github.io/mahjong-helper-hong-kong/free/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="50 Free Copies — Mahjong Helper Hong Kong Rules">
+    <meta name="twitter:description" content="I'm giving away 50 copies of Mahjong Helper Hong Kong Rules on Google Play. Claim one while they're available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      .giveaway-page { max-width: 800px; margin: 0 auto; }
+      .giveaway-hero { text-align: center; padding: clamp(28px, 6vw, 64px); }
+      .giveaway-hero .eyebrow { margin-bottom: 18px; }
+      .giveaway-hero h1 { max-width: 12ch; margin: 0 auto; }
+      .giveaway-hero .lead { margin: 22px auto 0; font-size: 1.1rem; }
+      .giveaway-count { margin: 30px auto 0; color: var(--primary-deep); font: 700 clamp(1.2rem, 4vw, 1.55rem)/1.25 "Outfit", sans-serif; }
+      .giveaway-action { margin-top: 24px; }
+      .giveaway-action .button { min-height: 54px; min-width: 240px; font-size: 1.05rem; }
+      .giveaway-action .button:disabled { opacity: .65; cursor: wait; transform: none; }
+      .giveaway-note { margin: 16px auto 0; color: var(--muted); }
+      .giveaway-error { color: #8b2e1b; margin: 16px auto 0; max-width: 38ch; }
+      .giveaway-secondary { margin-top: 28px; color: var(--muted); }
+      .giveaway-secondary a { color: var(--primary-deep); }
+      @media (max-width: 640px) { .giveaway-action .button { width: 100%; } }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/">Pupperhelm Studio</a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="/mahjong-helper-hong-kong/">About the app</a>
+          <a href="/mahjong-helper-hong-kong/privacy_notice.html">Privacy</a>
+        </nav>
+      </header>
+      <main class="page giveaway-page">
+        <section class="hero giveaway-hero" aria-labelledby="giveaway-title">
+          <p class="eyebrow">Mahjong Helper Hong Kong Rules</p>
+          <h1 id="giveaway-title">50 free copies</h1>
+          <p class="lead">I'm giving away 50 free copies of Mahjong Helper Hong Kong Rules.</p>
+          <p id="remaining" class="giveaway-count" role="status" aria-live="polite">Checking availability…</p>
+          <div id="claim-section" class="giveaway-action" hidden>
+            <button id="claim-button" class="button" type="button">Claim a free copy</button>
+            <p class="giveaway-note">You'll be sent to Google Play to redeem your free copy. No signup or payment required.</p>
+          </div>
+          <div id="sold-out-section" class="giveaway-action" hidden>
+            <p>Thanks for checking it out. Mahjong Helper Hong Kong Rules is still available on Google Play.</p>
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.pupperhelm.mahjonghelper">View on Google Play</a>
+          </div>
+          <p id="error" class="giveaway-error" role="alert" hidden></p>
+          <p class="giveaway-secondary">Or <a href="https://play.google.com/store/apps/details?id=com.pupperhelm.mahjonghelper">view the app on Google Play</a>.</p>
+          <noscript><p class="giveaway-error">Enable JavaScript to check availability and claim a copy.</p></noscript>
+        </section>
+      </main>
+      <footer class="footer"><p><a href="/">Back to studio</a></p></footer>
+    </div>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -216,6 +216,20 @@ a {
   border-color: var(--line);
 }
 
+.button-store {
+  min-height: 76px;
+  min-width: min(100%, 320px);
+  padding: 16px 30px;
+  background: var(--primary-deep);
+  font: 700 clamp(1.2rem, 2.5vw, 1.55rem)/1.2 "Outfit", sans-serif;
+  text-align: center;
+}
+
+.button-store:hover,
+.button-store:focus-visible {
+  background: var(--primary);
+}
+
 .panel {
   margin-top: 24px;
   padding: 28px;
